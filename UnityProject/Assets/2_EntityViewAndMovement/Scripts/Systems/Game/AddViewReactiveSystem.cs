@@ -5,13 +5,13 @@ using Entitas.Unity;
 using UnityEngine;
 
 // 给每个拥有Sprite（该Component只保存了图片名称）的GameEntity添加一个View的GameObject
-public class AddViewSystem : ReactiveSystem<GameEntity>
+public class AddViewReactiveSystem : ReactiveSystem<GameEntity>
 {
     // 为了好看，所有ViewGameObject都放在该父节点下
     readonly Transform _viewContainer = new GameObject("Game Views").transform;
     readonly GameContext _context;
 
-    public AddViewSystem(Contexts contexts) : base(contexts.game)
+    public AddViewReactiveSystem(Contexts contexts) : base(contexts.game)
     {
         _context = contexts.game;
     }

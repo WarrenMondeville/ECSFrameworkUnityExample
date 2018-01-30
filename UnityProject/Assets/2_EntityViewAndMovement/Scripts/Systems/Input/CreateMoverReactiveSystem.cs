@@ -4,10 +4,10 @@ using Entitas;
 using UnityEngine;
 
 // 监听的是InputContext中的右键数据，所以是InputEntity的ReactiveSystem
-public class CreateMoverSystem : ReactiveSystem<InputEntity>
+public class CreateMoverReactiveSystem : ReactiveSystem<InputEntity>
 {
     readonly GameContext _gameContext;
-    public CreateMoverSystem(Contexts contexts) : base(contexts.input)
+    public CreateMoverReactiveSystem(Contexts contexts) : base(contexts.input)
     {
         _gameContext = contexts.game;
     }

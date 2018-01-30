@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Entitas;
 
 // 处理Position值发生变化后的处理，直接赋值就OK，不多说
-public class RenderPositionSystem : ReactiveSystem<GameEntity>
+public class RenderPositionReactiveSystem : ReactiveSystem<GameEntity>
 {
-    public RenderPositionSystem(Contexts contexts) : base(contexts.game)
+    public RenderPositionReactiveSystem(Contexts contexts) : base(contexts.game)
     {
     }
 

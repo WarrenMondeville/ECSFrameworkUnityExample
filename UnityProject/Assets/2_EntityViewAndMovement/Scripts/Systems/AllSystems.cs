@@ -7,14 +7,14 @@ public class AllSystems : Feature
     public AllSystems(Contexts ctxs) : base("All Systems")
     {
         Add(new EmitInputSystem(ctxs));
-        Add(new CreateMoverSystem(ctxs));
-        Add(new CommandMoveSystem(ctxs));
+        Add(new CreateMoverReactiveSystem(ctxs));
+        Add(new CommandMoveReactiveSystem(ctxs));
         Add(new MiddleMouseKeyChangeSpriteSystem(ctxs));
 
-        Add(new AddViewSystem(ctxs));
-        Add(new RenderSpriteSystem(ctxs));
-        Add(new RenderPositionSystem(ctxs));
-        Add(new RenderDirectionSystem(ctxs));
+        Add(new AddViewReactiveSystem(ctxs));
+        Add(new RenderSpriteReactiveSystem(ctxs));
+        Add(new RenderPositionReactiveSystem(ctxs));
+        Add(new RenderDirectionReactiveSystem(ctxs));
 
         Add(new MoveSystem(ctxs));
     }

@@ -6,7 +6,9 @@ public class DebugMessageFeatureSystems : Feature
     {
         Add(new DebugMessageInitializeSystem(contexts));
         Add(new DebugMessageExecuteSystem(contexts));
+        Add(new LeftMouseClickCountSystem(contexts));
         Add(new DebugMessageReactiveSystem(contexts));
+
         Add(new DebugMessageCleanupSystem(contexts));
    
     }

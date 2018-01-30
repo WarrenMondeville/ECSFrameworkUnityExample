@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Entitas;
 using UnityEngine;
 
-public class RenderSpriteSystem : ReactiveSystem<GameEntity>
+public class RenderSpriteReactiveSystem : ReactiveSystem<GameEntity>
 {
-    public RenderSpriteSystem(Contexts contexts) : base(contexts.game)
+    public RenderSpriteReactiveSystem(Contexts contexts) : base(contexts.game)
     {
     }
 

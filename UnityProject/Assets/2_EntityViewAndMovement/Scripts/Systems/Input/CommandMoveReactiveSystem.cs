@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Entitas;
 
 // 点击左键后，用于创建移动命令
-public class CommandMoveSystem : ReactiveSystem<InputEntity>
+public class CommandMoveReactiveSystem : ReactiveSystem<InputEntity>
 {
     readonly IGroup<GameEntity> _movers;
 
     // 获取拥有Mover标志Entity的组
-    public CommandMoveSystem(Contexts contexts) : base(contexts.input)
+    public CommandMoveReactiveSystem(Contexts contexts) : base(contexts.input)
     {
         _movers = contexts.game.GetGroup(GameMatcher.AllOf(GameMatcher.Mover));
     }

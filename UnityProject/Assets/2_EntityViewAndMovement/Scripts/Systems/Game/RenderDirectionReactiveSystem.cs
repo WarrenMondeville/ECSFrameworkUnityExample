@@ -4,11 +4,11 @@ using Entitas;
 using UnityEngine;
 
 // 该System也一样处理比较直接，不多说
-public class RenderDirectionSystem : ReactiveSystem<GameEntity>
+public class RenderDirectionReactiveSystem : ReactiveSystem<GameEntity>
 {
     readonly GameContext _context;
 
-    public RenderDirectionSystem(Contexts contexts) : base(contexts.game)
+    public RenderDirectionReactiveSystem(Contexts contexts) : base(contexts.game)
     {
         _context = contexts.game;
     }
