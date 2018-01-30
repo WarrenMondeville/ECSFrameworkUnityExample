@@ -2,13 +2,13 @@
 using Entitas;
 
 // 继承于IInitializeSystem，作用是在程序启动时，执行一次Initialize方法  
-public class HelloWorldSystem : IInitializeSystem
+public class DebugMessageInitializeSystem : IInitializeSystem
 {
     // game环境  
     readonly GameContext _context;
 
     // 创建时传入game的环境  
-    public HelloWorldSystem(Contexts contexts)
+    public DebugMessageInitializeSystem(Contexts contexts)
     {
         _context = contexts.game;
     }

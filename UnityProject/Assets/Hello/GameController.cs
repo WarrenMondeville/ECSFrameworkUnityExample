@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
 
         // 创建系统集，将自定义的系统集添加进去  
         _systems = new Feature("System")
-            .Add(new TutorialSystems(contexts));
+            .Add(new DebugMessageFeatureSystems(contexts));
 
         // 初始化，会执行所有实现IInitialzeSystem的Initialize方法  
         // 当然这边就会创建那个拥有DebugMessageComponent的Entity  

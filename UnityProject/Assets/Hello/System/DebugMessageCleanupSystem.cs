@@ -3,7 +3,7 @@ using System;
 using Entitas;
 
 // 继承于ICleanupSystem  
-public class CleanupDebugMessageSystem : ICleanupSystem
+public class DebugMessageCleanupSystem : ICleanupSystem
 {
     // 保存game环境  
     readonly GameContext _context;
@@ -11,7 +11,7 @@ public class CleanupDebugMessageSystem : ICleanupSystem
     readonly IGroup<GameEntity> _debugMessages;
 
     // 构造函数，添加game环境和保存拥有DebugMessage组件的Group  
-    public CleanupDebugMessageSystem(Contexts contexts)
+    public DebugMessageCleanupSystem(Contexts contexts)
     {
         _context = contexts.game;
         _debugMessages = _context.GetGroup(GameMatcher.DebugMessage);
