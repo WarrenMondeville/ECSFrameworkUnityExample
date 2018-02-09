@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
+//using System.Reflection;
 using DesperateDevs.CodeGeneration;
 using DesperateDevs.CodeGeneration.CodeGenerator;
 using DesperateDevs.Serialization;
@@ -102,9 +102,9 @@ namespace Entitas.CodeGeneration.Plugins {
             data.SetEntityIndexName(type.ToCompilableString().RemoveDots());
             data.SetHasMultiple(false);
             data.SetContextNames(new[] { attribute.contextType.ToCompilableString().ShortTypeName().RemoveContextSuffix() });
-
+            UnityEngine.Debug.Log("reflection");
             var getMethods = type
-                .GetMethods(BindingFlags.Public | BindingFlags.Instance)
+                .GetMethods(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance)
                 .Where(method => Attribute.IsDefined(method, typeof(EntityIndexGetMethodAttribute)))
                 .Select(method => new MethodData(
                     method.ReturnType.ToCompilableString(),

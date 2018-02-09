@@ -15,8 +15,8 @@ public class PlayBackSystemGameController : MonoBehaviour {
     void Start()
     {
         var contexts = Contexts.sharedInstance;
-
-        _systems = CreateSystems(contexts);
+        _systems = new Systems();
+        _systems .Add(CreateSystems(contexts));
         var logicSystems = CreateLogicSystems(contexts);
         _systems.Add(logicSystems);
 

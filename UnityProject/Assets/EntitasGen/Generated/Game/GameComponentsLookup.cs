@@ -14,20 +14,25 @@ public static class GameComponentsLookup {
     public const int Direction = 3;
     public const int Elixir = 4;
     public const int ElixirLisenter = 5;
-    public const int JumpInTime = 6;
-    public const int LogicSystem = 7;
-    public const int MoveComplete = 8;
-    public const int Move = 9;
-    public const int Mover = 10;
-    public const int Pause = 11;
-    public const int PauseListener = 12;
-    public const int Position = 13;
-    public const int Sprite = 14;
-    public const int Tick = 15;
-    public const int TickListener = 16;
-    public const int View = 17;
+    public const int Food = 6;
+    public const int JumpInTime = 7;
+    public const int LogicSystem = 8;
+    public const int MoveComplete = 9;
+    public const int Move = 10;
+    public const int Mover = 11;
+    public const int Obstacle = 12;
+    public const int Pause = 13;
+    public const int PauseListener = 14;
+    public const int Position = 15;
+    public const int Score = 16;
+    public const int Snake = 17;
+    public const int SnakeSegment = 18;
+    public const int Sprite = 19;
+    public const int Tick = 20;
+    public const int TickListener = 21;
+    public const int View = 22;
 
-    public const int TotalComponents = 18;
+    public const int TotalComponents = 23;
 
     public static readonly string[] componentNames = {
         "ConsumeElixir",
@@ -36,14 +41,19 @@ public static class GameComponentsLookup {
         "Direction",
         "Elixir",
         "ElixirLisenter",
+        "Food",
         "JumpInTime",
         "LogicSystem",
         "MoveComplete",
         "Move",
         "Mover",
+        "Obstacle",
         "Pause",
         "PauseListener",
         "Position",
+        "Score",
+        "Snake",
+        "SnakeSegment",
         "Sprite",
         "Tick",
         "TickListener",
@@ -57,14 +67,19 @@ public static class GameComponentsLookup {
         typeof(DirectionComponent),
         typeof(ElixirComponent),
         typeof(ElixirLisenterComponent),
+        typeof(FoodComponent),
         typeof(JumpInTimeComponent),
         typeof(LogicSystemComponent),
         typeof(MoveCompleteComponent),
         typeof(MoveComponent),
         typeof(MoverComponent),
+        typeof(ObstacleComponent),
         typeof(PauseComponent),
         typeof(PauseListenerComponent),
         typeof(PositionComponent),
+        typeof(ScoreComponent),
+        typeof(SnakeComponent),
+        typeof(SnakeSegmentComponent),
         typeof(SpriteComponent),
         typeof(TickComponent),
         typeof(TickListenerComponent),
